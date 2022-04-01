@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#add">
+        Add
+    </button>
+
+    
+
+                
+                <div class="modal-body">
+                    <form action="order.php" method="POST" enctype="multipart/form-data" id="myform">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" class="form-control" name="name" id="name" placeholder="Enter Name" required="">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="category">Category:</label>
+                            <select class="form-control" id="category" name="category">
+                                <option selected="true" disabled="disabled">---Select Category---</option>
+                                <option value="herbivores" selected>Herbivores</option>
+                                <option value="omnivores">Omnivores</option>
+                                <option value="carnivores">Carnivores</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="filename">Photo:</label>
+								<input type="file" name="filename" class="form-control" multiple>
+								</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="description">Description:</label>
+                            <textarea class="form-control" rows="5" name="description" id="description"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lifeexp">Life expectancy:</label>
+                            <select class="form-control" name="lifeexp" id="lifeexp">
+                                <option selected="true" disabled="disabled">---Select Category---</option>
+                                <option value="0-1 year" selected>0-1 year</option>
+                                <option value="1-5 years">1-5 years</option>
+                                <option value="5-10 years">5-10 years</option>
+                                <option value="10+ years">10+ years</option>
+                            </select>
+                        </div>
+
+                
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="submit" name="reg" class="btn btn-primary" data-dismiss="modal">Save</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+
+           
+</body>
+
+</html>
